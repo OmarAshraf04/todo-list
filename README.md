@@ -1,6 +1,6 @@
-# todo
+# to-do list
 
-A new Flutter project.
+Creating a to-do list through API
 
 ## Getting Started
 
