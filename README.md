@@ -1,6 +1,7 @@
 # to-do list
 
 Creating a to-do list through API
+![Phonescreen](https://github.com/OmarAshraf04/todo-list/assets/141797530/106f8b13-07d4-45a7-b6b9-45b0bde47ff2)
 
 ## Getting Started
 
