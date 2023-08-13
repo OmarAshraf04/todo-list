@@ -3,6 +3,7 @@ import '../../data/models/todo.dart';
 
 class Contents extends StatelessWidget {
   final Todos todo;
+
   const Contents({super.key, required this.todo});
 
   @override
@@ -10,57 +11,58 @@ class Contents extends StatelessWidget {
     return Stack(
       children: [
         Container(
-        decoration: BoxDecoration(
-          borderRadius:  BorderRadius.circular(15),
-          color: Colors.blue,
-        ),
-        margin: const EdgeInsets.all(10),
-        child: Column(
-          children: [
-             const SizedBox(
-               height: 46,
-             ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            color: Colors.blue,
+          ),
+          margin: const EdgeInsets.all(10),
+          child: Column(
+            children: [
 
-            Padding(
-              padding: const EdgeInsets.all(9),
-              child: SizedBox(
-                height: 90,
-                child: Text(
-                  todo.todo,
-                  style: const TextStyle(
-                    fontSize: 18,
+              const SizedBox(
+                height: 44,
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(9),
+                child: SizedBox(
+                  height: 88,
+                  child: Text(
+                    todo.todo,
+                    style: const TextStyle(
+                        fontSize: 18
+                    ),
                   ),
                 ),
               ),
-            ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  'Completed: ',
-                  style: TextStyle(
-                    color: Colors.purple,
-                    fontSize: 15,
+               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+
+                  const Text(
+                    'Completed:',
+                    style: TextStyle(
+                      color: Colors.purple,
+                      fontSize: 15,
+                    ),
                   ),
-                ),
 
-                const SizedBox(
-                  width: 8,
-                ),
-
-                Text(
-                  todo.completed.toString(),
-                  style: const TextStyle(
-                    color: Colors.purple,
-                    fontSize: 15,
+                  const SizedBox(
+                    width: 8,
                   ),
-                )
-              ],
-            ),
-          ],
+
+                  Icon(
+                    todo.completed
+                        ? Icons.check_box
+                        : Icons.check_box_outline_blank
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
-        ),
+
         Positioned(
           top: 14,
           right: 15,
@@ -82,7 +84,7 @@ class Contents extends StatelessWidget {
             ),
           ),
         )
-      ]
+      ],
     );
   }
 }

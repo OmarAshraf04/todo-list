@@ -54,8 +54,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey,
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
-          : SafeArea(
-        child: GridView.builder(
+          : SafeArea(child: GridView.builder(
           itemCount: todolist.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
